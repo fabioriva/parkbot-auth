@@ -1,0 +1,23 @@
+{
+  "name": "parkbot-auth",
+  "version": "1.0.0",
+  "description": "parkbot, authentication backend",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon lib/index.js"
+  },
+  "author": "f.riva@sotefin.ch",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.14.1",
+    "fastify-mongodb": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "standard": "^16.0.3"
+  }
+}
