@@ -2,8 +2,6 @@ node_modules/
 
 tmp/
 
-haproxy*
+utils/
 
 .env
-
-user.json
