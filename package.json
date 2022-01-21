@@ -4,7 +4,8 @@
   "description": "parkbot, authentication backend",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon lib/index.js"
+    "dev": "nodemon lib/index.js",
+    "start": "NODE_ENV=production pm2 start lib/index.js --name parkbot-auth --max-memory-restart 128M"
   },
   "author": "f.riva@sotefin.ch",
   "license": "ISC",
