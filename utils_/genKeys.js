@@ -24,13 +24,13 @@ const insertMany = util.promisify((db, collection, data, callback) => {
 const start = async () => {
   try {
     const a = []
-    fs.appendFileSync(FILE, `{"keys":[\r\n`)
+    fs.appendFileSync(FILE, '{"keys":[\r\n')
     for (let i = 0; i < 100; i++) {
       const password = await generatePassword(SIZE)
       a.push({ key: password, valid: true })
       fs.appendFileSync(FILE, `{"key": "${password}", "valid": true},\r\n`)
     }
-    fs.appendFileSync(FILE, `]}\r\n`)
+    fs.appendFileSync(FILE, ']}\r\n')
     console.log(a)
 
     await client.connect()
