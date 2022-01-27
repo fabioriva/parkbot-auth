@@ -6,7 +6,7 @@ const { generatePassword } = require('../lib/password')
 
 const APS = 'qihe'
 const DATABASE = APS
-const FILE = `./${APS}.js`
+const FILE = `./${APS}.json`
 const SIZE = 6
 
 const client = new MongoClient(process.env.MONGODB_URI, {
@@ -24,11 +24,13 @@ const insertMany = util.promisify((db, collection, data, callback) => {
 const start = async () => {
   try {
     const a = []
+    fs.appendFileSync(FILE, `{"keys":[\r\n`)
     for (let i = 0; i < 100; i++) {
       const password = await generatePassword(SIZE)
       a.push({ key: password, valid: true })
-      fs.appendFileSync(FILE, `{key: ${password}\r\n}`)
+      fs.appendFileSync(FILE, `{"key": "${password}", "valid": true},\r\n`)
     }
+    fs.appendFileSync(FILE, `]}\r\n`)
     console.log(a)
 
     await client.connect()
