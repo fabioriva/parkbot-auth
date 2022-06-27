@@ -2,10 +2,11 @@
   "name": "parkbot-auth",
   "version": "1.0.0",
   "description": "parkbot, authentication backend",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon lib/index.js",
-    "start": "NODE_ENV=production pm2 start lib/index.js --name parkbot-auth --max-memory-restart 128M"
+    "dev": "nodemon index.js",
+    "start": "NODE_ENV=production pm2 start index.js --name parkbot-auth --max-memory-restart 128M"
   },
   "author": "f.riva@sotefin.ch",
   "license": "ISC",
