@@ -1,6 +1,6 @@
 const ACTIONS = 'actions' // deprecated
 const DIAGNOSTIC = 'diagnostic'
-const EDIT_CARD = 'edit-card';
+const EDIT_CARD = 'edit-card'
 const EDIT_STALL = 'edit-stall'
 const ENTRY = 'entry'
 const EXIT = 'exit'
@@ -12,8 +12,8 @@ const VALET_RIGHTS = [EXIT]
 const USER_RIGHTS = []
 
 module.exports = {
-  ADMIN_RIGHTS: ADMIN_RIGHTS,
-  SERVICE_RIGHTS: SERVICE_RIGHTS,
-  USER_RIGHTS: USER_RIGHTS,
-  VALET_RIGHTS: VALET_RIGHTS
+  ADMIN_RIGHTS,
+  SERVICE_RIGHTS,
+  USER_RIGHTS,
+  VALET_RIGHTS
 }

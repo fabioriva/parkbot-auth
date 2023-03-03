@@ -4,6 +4,6 @@ node_modules/
 
 tmp/
 
-utils_/adduser.js
+utils/adduser.js
 
 .env
