@@ -35,6 +35,11 @@ class Users {
     console.log('res', res)
   }
 
+  async userFindAll () {
+    const res = await this.collection.find()
+    console.log('res', res)
+  }
+
   async userRightAdd (username, right) {
     const res = await this.collection.updateOne({ username }, { $push: { rights: right } })
     console.log(res)
