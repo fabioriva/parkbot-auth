@@ -36,7 +36,7 @@ class Users {
   }
 
   async userFindAll () {
-    const res = await this.collection.find()
+    const res = await this.collection.find({}).toArray()
     console.log('res', res)
   }
 
