@@ -8,7 +8,8 @@ const ROLLBACK = 'rollback'
 
 const ADMIN_RIGHTS = [ACTIONS, DIAGNOSTIC, EDIT_CARD, EDIT_STALL, ENTRY, EXIT, ROLLBACK]
 const SERVICE_RIGHTS = [EDIT_CARD, EDIT_STALL, ENTRY, EXIT]
-const VALET_RIGHTS = [EXIT]
+// const VALET_RIGHTS = [EXIT]
+const VALET_RIGHTS = []
 const USER_RIGHTS = []
 
 module.exports = {

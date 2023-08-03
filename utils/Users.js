@@ -31,8 +31,10 @@ class Users {
   }
 
   async userFind (query, options = {}) {
-    const res = await this.collection.findOne(query, options)
-    console.log('res', res)
+    const cursor = await this.collection.find(query, options)
+    for await (const doc of cursor) {
+      console.log(doc)
+    }
   }
 
   async userFindAll () {
