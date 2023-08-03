@@ -27,9 +27,9 @@ const run = async () => {
         if (req.method === 'POST' && req.url === '/auth/signin') {
           return await signin(micro, req, res, users)
         }
-        if (req.method === 'POST' && req.url === '/user/add') {
-          return await userAdd(micro, req, res, users)
-        }
+        // if (req.method === 'POST' && req.url === '/user/add') {
+        //   return await userAdd(micro, req, res, users)
+        // }
         micro.send(res, 404, 'Error 404 - Resource not found')
       })
     )
