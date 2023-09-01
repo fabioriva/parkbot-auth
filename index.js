@@ -6,11 +6,13 @@ const { login, password, profile, signin } = require('./lib/routes')
 
 const run = async () => {
   try {
-    const client = await MongoClient.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
-    const db = client.db('parkbot')
+    // const client = MongoClient.connect(process.env.MONGODB_URI, {
+    //   useNewUrlParser: true,
+    //   useUnifiedTopology: true
+    // })
+    const client = new MongoClient(process.env.MONGODB_URI, {})
+    await client.connect()
+    const db = await client.db('parkbot')
     const users = db.collection('users')
     await users.createIndex({ username: 1 }, { unique: true })
     const server = new http.Server(
