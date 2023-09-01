@@ -11,7 +11,7 @@
   "author": "f.riva@sotefin.ch",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.1.0",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.3.1",
     "jsonwebtoken": "^9.0.1",
     "micro": "^10.0.1",
