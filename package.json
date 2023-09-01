@@ -16,7 +16,7 @@
     "jsonwebtoken": "^9.0.2",
     "micro": "^10.0.1",
     "mongodb": "^6.0.0",
-    "pino": "^8.14.2"
+    "pino": "^8.15.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1",
